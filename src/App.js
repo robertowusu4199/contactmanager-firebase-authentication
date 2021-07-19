@@ -4,6 +4,7 @@ import Dashboard from './components/Dashboard';
 import HomePage from './pages/HomePage';
 import LogIn from './pages/LogIn';
 import SignUp from './pages/SignUp';
+import ProtectedRoute from "./components/ProtectedRoute";
 
 class App extends React.Component{
  
@@ -15,6 +16,7 @@ class App extends React.Component{
             <Route exact path = '/' component = {HomePage}/>
             <Route exact path = '/signup' component = {SignUp}/>
             <Route exact path = '/login' component = {LogIn}/>
+            <ProtectedRoute exact path = '/dashboard' component = {Dashboard}/>
           </Switch>
         </BrowserRouter>
       </div>
